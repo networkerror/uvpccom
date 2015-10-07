@@ -54,7 +54,7 @@
       require_once('emailer.php');
 
       $emailer = new Emailer();
-      $emailer->toEmail('networkerror@gmail.com')
+      $emailer->toEmail('gjones@uv-pc.com')
               ->fromEmail($_POST['email'])
               ->subject("uv-pc.com message from '".$_POST['email']."'")
               ->message($_POST['message']);
