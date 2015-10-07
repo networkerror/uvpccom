@@ -1,0 +1,50 @@
+header.page-header {
+  margin-top: 0px;
+  padding: 20px 0px 20px 45px;
+  background-image: url(img/header-background.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: -161px;
+}
+header.page-header h1 {
+  margin-bottom: 10px;
+}
+header.page-header small {
+  font-size: 18px;
+  font-style: italic;
+  margin-left: 18px;
+}
+
+main {
+  margin: 10px 25px 0px 35px;
+}
+
+main h4 {
+  margin-bottom: 25px;
+}
+
+h1, h2, h3, h4 {
+  margin: 0px;
+  padding: 0px;
+}
+
+figure.well {
+  max-width: 800px;
+  padding: 45px 0px 45px 15px;
+  margin-bottom: 35px;
+}
+
+figure h2 {
+  font-variant: small-caps;
+}
+
+figure.glass {
+  background-image: url(img/all_the_glasses.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+section>h2 {
+  border-bottom: 1px solid lightgray;
+  margin: 45px 0px 15px -10px;
+}
