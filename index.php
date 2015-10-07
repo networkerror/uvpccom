@@ -73,15 +73,15 @@
         <?php
       }
     }
-    
+
     if (!sendingEmail || !$sentEmail) {
     ?>
     <form action="./" method="POST">
-      <input type="text" name="email" placeholder="Email Address">
+      <input type="text" name="email" placeholder="Email Address" value="<?php echo $_POST['email']; ?>">
       <br>
       Message
       <br>
-      <textarea name="message"></textarea>
+      <textarea name="message"><?php echo $_POST['message']; ?></textarea>
       <br>
       <input class="btn btn-primary" type="submit" value="SEND">
     </form>
