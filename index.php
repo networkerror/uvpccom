@@ -48,7 +48,9 @@
 
     <h3>Email</h3>
     <?php
-    if($_POST['email']) {
+    $sendingEmail = (boolean)$_POST['email'];
+    $sentEmail = false;
+    if($sendingEmail) {
       require_once('emailer.php');
 
       $emailer = new Emailer();
@@ -56,7 +58,8 @@
               ->fromEmail($_POST['email'])
               ->subject("uv-pc.com message from '".$_POST['email']."'")
               ->message($_POST['message']);
-      if ($emailer->send()) {
+      $sentEmail = $emailer->send();
+      if ($sentEmail) {
         ?>
         <div class="alert alert-success">You message has been sent.  Thank you.</div>
         <?php
@@ -69,7 +72,9 @@
         </div>
         <?php
       }
-    } else {
+    }
+    
+    if (!sendingEmail || !$sentEmail) {
     ?>
     <form action="./" method="POST">
       <input type="text" name="email" placeholder="Email Address">
