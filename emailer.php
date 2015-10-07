@@ -34,7 +34,7 @@ class Emailer {
    **/
   public function validate() {
     $this->errors = array();
-    if (!$this->toEmail || preg_match($this->email_exp, $this->toEmail)) {
+    if (!$this->toEmail || !preg_match($this->email_exp, $this->toEmail)) {
       $this->errors[] = 'Please enter a valid destination email address.';
     }
     if (!$this->fromEmail || !preg_match($this->email_exp, $this->fromEmail)) {
