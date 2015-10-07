@@ -110,3 +110,17 @@ input[type=text], textarea {
 textarea {
   height: 150px;
 }
+
+.btn-primary {
+  background-color: #493650;
+  border-color: #493650;
+}
+
+footer {
+  margin: auto;
+}
+footer>section {
+  border-top: 1px solid lightgray;
+  height: 5px;
+  padding: 14px;
+}
