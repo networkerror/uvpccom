@@ -1,27 +1,42 @@
 body {
   background-color: black;
-  background-image: url(img/solar-huge-orange.png);
+  background-image: url(img/solar-huge-orange-narrow-purple.png);
   background-position-x: right;
   background-repeat: no-repeat;
   background-size: 1030px;
+  background-attachment: fixed;
+  padding-right: 825px;
+  color: #565656;
 }
 
 header.page-header {
   margin: auto;
   padding: 0px;
   border: none;
+  position: relative;
 }
 header.page-header h1 {
+  font-variant: small-caps;
+  font-size: 57px;
+  font-weight: 600;
+  color: #493650;
   margin-bottom: 10px;
 }
 header.page-header small {
   font-size: 18px;
   font-style: italic;
   margin-left: 18px;
+  color: #737373;
+}
+header.page-header img {
+  position: absolute;
 }
 header>section {
   background-color: white;
   border-bottom: 2px solid lightgray;
+  background-image: url(img/logo.png);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
 }
 
 main {
@@ -50,10 +65,18 @@ figure.well {
   max-width: 800px;
   padding: 45px 0px 45px 15px;
   margin-bottom: 35px;
+  box-shadow: 7px 7px 10px #DCDCDC;
 }
 
 figure h2 {
+  color: black;
   font-variant: small-caps;
+}
+
+figure.metal {
+  background-image: url(img/all_the_metal.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
 }
 
 figure.glass {
@@ -62,7 +85,29 @@ figure.glass {
   background-position-x: right;
 }
 
+figure.plastic {
+  background-image: url(img/all_the_plastic.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
 section>h2 {
   border-bottom: 1px solid lightgray;
-  margin: 45px 0px 15px -10px;
+  margin: 25px 0px 15px -10px;
+}
+
+section>h3 {
+  margin-top: 25px;
+  margin-bottom: 6px;
+}
+
+section>address {
+  margin-bottom: 5px;
+}
+
+input[type=text], textarea {
+  width: 266px;
+}
+textarea {
+  height: 150px;
 }
