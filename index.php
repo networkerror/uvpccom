@@ -63,6 +63,10 @@
         ?>
         <div class="alert alert-success">You message has been sent.  Thank you.</div>
         <?php
+        // Send CC to the sender
+        $emailer->toEmail($_POST['email'])
+                ->message("This is a copy of a message you sent to uv-pc.com - for your records.\n\n".$_POST['message'])
+                ->send();
       } else {
         $errorOut = "<ul><li>".implode($emailer->getErrors(), "</li><li>")."</li></ul>";
         ?>
