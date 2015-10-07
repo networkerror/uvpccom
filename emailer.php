@@ -24,7 +24,7 @@ class Emailer {
   public function toEmail($email)   { $this->toEmail = $this->sanitize($email); return $this;   }
   public function fromEmail($email) { $this->fromEmail = $this->sanitize($email); return $this; }
   public function subject($subject) { $this->subject = $this->sanitize($subject); return $this; }
-  public function message($message) { $this->message = $this->sanitize($message); return $this; }
+  public function message($message) { $this->message = $message; return $this; }
 
   /**
    * Validate current from/to email and message.
