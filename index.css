@@ -1,10 +1,15 @@
-header.page-header {
-  margin-top: 0px;
-  padding: 20px 0px 20px 45px;
-  background-image: url(img/header-background.png);
-  background-repeat: no-repeat;
+body {
+  background-color: black;
+  background-image: url(img/solar-huge-orange.png);
   background-position-x: right;
-  background-position-y: -161px;
+  background-repeat: no-repeat;
+  background-size: 1030px;
+}
+
+header.page-header {
+  margin: auto;
+  padding: 0px;
+  border: none;
 }
 header.page-header h1 {
   margin-bottom: 10px;
@@ -14,9 +19,22 @@ header.page-header small {
   font-style: italic;
   margin-left: 18px;
 }
+header>section {
+  background-color: white;
+  border-bottom: 2px solid lightgray;
+}
 
 main {
-  margin: 10px 25px 0px 35px;
+  margin: auto;
+}
+
+section {
+  background-color: white;
+  display: table;
+  margin: 0 auto;
+  min-width: 800px;
+  max-width: 1000px;
+  padding: 25px;
 }
 
 main h4 {
