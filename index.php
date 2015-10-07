@@ -48,14 +48,14 @@
 
     <h3>Email</h3>
     <?php
-    if(isset($_POST['email'])) {
+    if($_POST['email']) {
       require_once('emailer.php');
 
       $emailer = new Emailer();
-      $emailer->toEmail('networkerror@gmail.com')->
-                fromEmail($_POST['email'])->
-                subject("uv-pc.com message from '".$_POST['email']."'")->
-                message($_POST['message']);
+      $emailer->toEmail('networkerror@gmail.com')
+              ->fromEmail($_POST['email'])
+              ->subject("uv-pc.com message from '".$_POST['email']."'")
+              ->message($_POST['message']);
       if ($emailer->send()) {
         ?>
         <div class="alert alert-success">You message has been sent.  Thank you.</div>
@@ -65,7 +65,7 @@
         ?>
         <div class="alert alert-danger">
           We encountered a problem sending your message:<br>
-          <?php=$errorOut?>
+          <?php echo $errorOut; ?>
         </div>
         <?php
       }

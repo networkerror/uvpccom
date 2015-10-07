@@ -21,10 +21,10 @@ class Emailer {
   /*
    * Chain these to configure your instance.
    */
-  public function toEmail($email)   { $this->toEmail = sanitize($email); return $this;   }
-  public function fromEmail($email) { $this->fromEmail = sanitize($email); return $this; }
-  public function subject($subject) { $this->subject = sanitize($subject); return $this; }
-  public function message($message) { $this->message = sanitize($message); return $this; }
+  public function toEmail($email)   { $this->toEmail = $this->sanitize($email); return $this;   }
+  public function fromEmail($email) { $this->fromEmail = $this->sanitize($email); return $this; }
+  public function subject($subject) { $this->subject = $this->sanitize($subject); return $this; }
+  public function message($message) { $this->message = $this->sanitize($message); return $this; }
 
   /**
    * Validate current from/to email and message.
@@ -35,7 +35,7 @@ class Emailer {
   public function validate() {
     $this->errors = array();
     if (!$this->toEmail || preg_match($this->email_exp, $this->toEmail)) {
-      $this->errors[] = 'Please specify a destination email address.';
+      $this->errors[] = 'Please enter a valid destination email address.';
     }
     if (!$this->fromEmail || !preg_match($this->email_exp, $this->fromEmail)) {
       $this->errors[] = 'Please enter a valid email address.';
