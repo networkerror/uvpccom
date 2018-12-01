@@ -40,8 +40,8 @@
 
     <address>
       UV Paint & Coatings<br>
-      509 Marin #125<br>
-      Thousand Oaks, CA 91360
+      98 N 1800 East St.<br>
+      Mapleton, UT 84664
     </address>
 
     <address>(805) 390-1866</address>
